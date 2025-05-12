@@ -1,0 +1,67 @@
+.error-page {
+  background: linear-gradient(135deg, #1e2a3a, #3b4c5c);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  &__card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+  }
+
+  &__image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__message {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  &__button {
+    display: block;
+    background-color: #4e9c91;
+    color: white;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+}

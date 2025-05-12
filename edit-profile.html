@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Profile - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="edit-profile">
+  <div class="edit-profile__background"></div>
+
+  <main class="edit-profile__container">
+    <div class="edit-profile__card">
+      <img src="images/user_avatar.png" alt="User Avatar" class="edit-profile__avatar" />
+
+      <h1 class="edit-profile__title">Edit Profile</h1>
+
+      <form class="edit-profile__form" onsubmit="event.preventDefault(); window.location.href='user-profile.html';">
+        <!-- Profile Picture Change -->
+        <div class="edit-profile__field">
+          <label>Profile Picture</label>
+          <button type="button" onclick="window.location.href='error-change-avatar.html'" class="edit-profile__change-button">
+            Change
+          </button>
+        </div>
+
+        <!-- Nickname -->
+        <div class="edit-profile__field">
+          <label for="nickname">Nickname</label>
+          <input type="text" id="nickname" class="edit-profile__input" value="Yana.Lebedynska" />
+        </div>
+
+        <!-- Email -->
+        <div class="edit-profile__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="edit-profile__input" value="yana.lebedynska@gmail.com" />
+        </div>
+
+        <!-- Name -->
+        <div class="edit-profile__field">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="edit-profile__input" value="Yana Lebedynska" />
+        </div>
+
+        <!-- Bio -->
+        <div class="edit-profile__field">
+          <label for="bio">Bio</label>
+          <textarea
+            id="bio"
+            class="edit-profile__textarea"
+            placeholder="Tell us about yourself"
+            onfocus="this.placeholder='';"
+            onblur="this.placeholder='Tell us about yourself';"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="edit-profile__save-button">Save Changes</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

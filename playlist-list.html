@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Playlists - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="playlist-page">
+  <div class="playlist-page__background"></div>
+
+  <main class="playlist-page__container">
+    <a href="user-profile.html" class="playlist-page__home-link">← Home</a>
+    <h1 class="playlist-page__title">Your Playlists</h1>
+
+    <div class="playlist-page__grid">
+
+      <div class="playlist-card" onclick="location.href='playlist-view1.html'">
+        <img src="images/playlist1_photo.png" alt="Playlist" class="playlist-card__image" />
+        <div class="playlist-card__content">
+          <h3>My Chillout</h3>
+          <p>Relaxing songs for evening</p>
+          <span class="playlist-card__label public">Public</span>
+        </div>
+      </div>
+
+      <div class="playlist-card" onclick="location.href='playlist_view2.html'">
+        <img src="images/playlist2_photo.jpg" alt="Playlist" class="playlist-card__image" />
+        <div class="playlist-card__content">
+          <h3>Workout Pump</h3>
+          <p>High energy music for gym</p>
+          <span class="playlist-card__label private">Private</span>
+        </div>
+      </div>
+
+      <div class="playlist-card" onclick="location.href='playlist_view3.html'">
+        <img src="images/playlist3_photo.jpg" alt="Playlist" class="playlist-card__image" />
+        <div class="playlist-card__content">
+          <h3>Morning Focus</h3>
+          <p>Music to start your day right</p>
+          <span class="playlist-card__label public">Public</span>
+        </div>
+      </div>
+
+      <div class="playlist-card" onclick="location.href='playlist_view4.html'">
+        <img src="images/playlist4_photo.jpg" alt="Playlist" class="playlist-card__image" />
+        <div class="playlist-card__content">
+          <h3>Sleep Sounds</h3>
+          <p>Calm ambient tracks for sleep</p>
+          <span class="playlist-card__label private">Private</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Playlist Service</p>
+  </footer>
+</body>
+</html>

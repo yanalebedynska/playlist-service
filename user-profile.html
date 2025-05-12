@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="user-profile">
+  <div class="user-profile__background"></div>
+
+  <header class="user-profile__header">
+    <div class="user-profile__info">
+      <div class="user-profile__avatar">
+        <img src="images/user_avatar.png" alt="User Avatar" />
+      </div>
+
+      <div class="user-profile__details">
+        <h2>Yana Lebedynska</h2>
+        <p>yana.lebedynska@gmail.com</p>
+      </div>
+    </div>
+    <button class="user-profile__logout-button" onclick="window.location.href='index.html'">Logout</button>
+  </header>
+
+  <main>
+    <h1 class="user-profile__welcome">Welcome back, Yana!</h1>
+
+    <section class="user-profile__grid">
+      <div class="user-profile__card">
+        <h3>🎵 Playlists</h3>
+        <p>You have 4 playlists</p>
+        <a href="playlist-list.html">View your playlists</a>
+      </div>
+
+      <div class="user-profile__card">
+        <h3>👥 Followers</h3>
+        <p>7 followers</p>
+        <a href="followers.html">View your followers</a>
+      </div>
+
+      <div class="user-profile__card">
+        <h3>🔍 Following</h3>
+        <p>5 you're following</p>
+        <a href="following.html">View who you're following</a>
+      </div>
+
+      <div class="user-profile__card">
+        <h3>⚙️ Edit Profile</h3>
+        <p>Update your profile information</p>
+        <a href="edit-profile.html">Edit Profile</a>
+      </div>
+    </section>
+
+    <section class="user-profile__card user-profile__card--dashboard">
+      <h3>Your Music Dashboard</h3>
+      <p>Manage playlists, explore new music, and enjoy your listening experience.</p>
+      <div class="user-profile__buttons">
+        <button class="user-profile__button" onclick="window.location.href='playlist-create.html'">+ Create Playlist</button>
+        <button class="user-profile__button user-profile__button--secondary" onclick="window.location.href='playlist-list.html'">View Playlists</button>
+        <button class="user-profile__button user-profile__button--secondary" onclick="window.location.href='statistics.html'">Your Statistics</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="user-profile__footer">
+    &copy; 2025 Playlist Service
+  </footer>
+</body>
+</html>

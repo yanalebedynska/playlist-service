@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Playlist</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="playlist-create-page">
+  <div class="overlay"></div>
+
+  <main class="playlist-create-container">
+    <a href="playlist-view1.html" class="back-link">← Go to Playlists</a>
+    <h1>Create New Playlist</h1>
+
+    <form class="playlist-form" id="playlist-form">
+      <div class="form-group">
+        <label for="playlist-name">Playlist Name</label>
+        <input type="text" id="playlist-name" name="playlist-name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="playlist-description">Description</label>
+        <textarea id="playlist-description" name="playlist-description"></textarea>
+      </div>
+
+      <div class="visibility-group">
+        <label>Visibility</label>
+        <div class="visibility-options">
+          <input type="radio" id="private" name="visibility" value="private" checked hidden />
+          <label for="private" class="visibility-label">Private</label>
+
+          <input type="radio" id="public" name="visibility" value="public" hidden />
+          <label for="public" class="visibility-label">Public</label>
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='user-profile.html'">Cancel</button>
+      </div>
+    </form>
+
+    <div class="success-message" id="success-message">
+      Playlist successfully created!
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Playlist Service
+  </footer>
+
+  <script>
+    const form = document.getElementById('playlist-form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Показати повідомлення
+      successMessage.style.display = 'block';
+
+      // Сховати через 3 сек
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+        form.reset();
+        // Повернути вибір Private як за замовчуванням
+        document.getElementById('private').checked = true;
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

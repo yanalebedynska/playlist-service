@@ -1,0 +1,59 @@
+.users {
+  background: linear-gradient(135deg, $bg-gradient-start, $bg-gradient-end);
+  font-family: $font-stack;
+  color: $text-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  &__container {
+    max-width: 800px;
+    margin: auto;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
+    padding: 2rem;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: $secondary-color;
+    }
+
+    td .role {
+      padding: 0.4rem 0.8rem;
+      border-radius: $border-radius;
+      font-weight: bold;
+
+      &--admin {
+        background-color: #ff7755;
+        color: white;
+      }
+
+      &--regular {
+        background-color: #4e9c91;
+        color: white;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

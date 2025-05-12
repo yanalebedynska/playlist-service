@@ -1,0 +1,2326 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url("../images/homepage_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  position: relative;
+}
+.homepage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+.homepage__header {
+  padding: 2rem 2rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.homepage__header .homepage__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.homepage__container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+.homepage__card {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  overflow: visible;
+}
+.homepage__card--large {
+  font-size: 1.25rem;
+}
+.homepage__card--large h2 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+.homepage__card--large ul,
+.homepage__card--large p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+.homepage__text {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.homepage__text h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+.homepage__text ul {
+  padding-left: 1.5rem;
+}
+.homepage__text li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+.homepage__text li::before {
+  content: "✔️";
+  margin-right: 0.5rem;
+  color: #4e9c91;
+}
+.homepage__auth {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 480px;
+}
+.homepage__auth-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.homepage__auth-text p {
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+.homepage__auth-text a {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.homepage__auth-text .btn-primary {
+  background-color: #4e9c91;
+  color: white;
+}
+.homepage__auth-text .btn-primary:hover {
+  background-color: #397c72;
+}
+.homepage__auth-text .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #222;
+}
+.homepage__auth-text .btn-secondary:hover {
+  background-color: rgb(255, 255, 255);
+}
+.homepage__image {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepage__image img {
+  max-width: 85%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.homepage__footer {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.login {
+  background: linear-gradient(135deg, #1e2a3a 0%, #3b4c5c 100%);
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login__container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.login__card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 3rem;
+  color: #ffffff;
+}
+
+.login__subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.form-group .login__input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #222;
+}
+
+.login__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.login__button--secondary {
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #191818;
+  color: #ffffff;
+}
+.login__button--secondary:hover {
+  background-color: #434343;
+}
+.login__button:not(.login__button--secondary) {
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #4e9c91;
+  color: #ffffff;
+}
+.login__button:not(.login__button--secondary):hover {
+  background-color: #397c72;
+}
+
+.login__footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.external-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.external-auth__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.external-auth__button--google {
+  background-color: #ffffff;
+  color: #222;
+  border: 1px solid #7c7a7a;
+}
+.external-auth__button--google:hover {
+  background-color: #f2f2f2;
+}
+.external-auth__button--apple {
+  background-color: #000;
+  color: #ffffff;
+}
+.external-auth__button--apple:hover {
+  background-color: #222;
+}
+.external-auth__icon {
+  width: 45px;
+  height: 45px;
+}
+
+.user-profile {
+  background: url("../images/profile_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 3rem;
+  position: relative;
+}
+.user-profile__background {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+.user-profile__header, .user-profile__welcome, .user-profile__card, .user-profile__footer {
+  position: relative;
+  z-index: 1;
+}
+.user-profile__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.user-profile__info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.user-profile__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-profile__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.user-profile__details h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+}
+.user-profile__details p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+.user-profile__logout-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.user-profile__logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.user-profile__welcome {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.user-profile__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.user-profile__card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  text-align: left;
+}
+.user-profile__card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+.user-profile__card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+.user-profile__card a {
+  color: #4e9c91;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.user-profile__card a:hover {
+  text-decoration: none;
+}
+.user-profile__card--dashboard {
+  text-align: center;
+}
+.user-profile__card--dashboard h3 {
+  font-size: 1.6rem;
+}
+.user-profile__card--dashboard p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+.user-profile__buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.user-profile__button {
+  background-color: #4e9c91;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.user-profile__button:hover {
+  background-color: #397c72;
+}
+.user-profile__button--secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.user-profile__button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.user-profile__footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.playlist-create-page {
+  background: url("../images/playlist_create_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.playlist-create-page .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.playlist-create-page .playlist-create-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+.playlist-create-page .playlist-create-container .back-link {
+  color: #a0e9ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.playlist-create-page .playlist-create-container .back-link:hover {
+  text-decoration: underline;
+}
+.playlist-create-page .playlist-create-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-group input,
+.playlist-create-page .playlist-create-container .playlist-form .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group {
+  margin-top: 1rem;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group .visibility-options {
+  display: flex;
+  gap: 1rem;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group .visibility-options input[type=radio] {
+  display: none;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group .visibility-options .visibility-label {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: transparent;
+  text-align: center;
+  flex: 1;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group .visibility-options input[type=radio]:checked + .visibility-label {
+  background-color: #4e9c91;
+  color: #ffffff;
+  border-color: #4e9c91;
+}
+.playlist-create-page .playlist-create-container .playlist-form .visibility-group .visibility-options .visibility-label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-buttons .btn-primary {
+  background-color: #4e9c91;
+  color: #ffffff;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-buttons .btn-primary:hover {
+  background-color: #397c72;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-buttons .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #333;
+}
+.playlist-create-page .playlist-create-container .playlist-form .form-buttons .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.playlist-create-page .playlist-create-container .success-message {
+  display: none;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 200, 100, 0.8);
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fade-in 0.3s ease-in-out;
+}
+.playlist-create-page .footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.error-page {
+  background: linear-gradient(135deg, #1e2a3a, #3b4c5c);
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-page__container {
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+}
+.error-page__card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+.error-page__image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+.error-page__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+.error-page__message {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  line-height: 1.6;
+  text-align: center;
+}
+.error-page__button {
+  display: block;
+  background-color: #4e9c91;
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+.error-page__button:hover {
+  background-color: #397c72;
+}
+
+.followers-page {
+  background: url("../images/playlist_create_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.followers-page__background {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+.followers-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem 1rem;
+  z-index: 1;
+  position: relative;
+}
+.followers-page__user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.followers-page__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.followers-page__user-info h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.followers-page__user-info p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+.followers-page__nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.followers-page__nav-button, .followers-page__logout {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.followers-page__nav-button:hover, .followers-page__logout:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.followers-page__content {
+  flex: 1;
+  padding: 0 4rem 2rem;
+  z-index: 1;
+  position: relative;
+}
+.followers-page__content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+.followers-page__content .followers-page__count {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+.followers-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .followers-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .followers-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.followers-page__footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+}
+
+.follower-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1.5rem 1.8rem;
+  gap: 1.5rem;
+  height: 120px;
+}
+.follower-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.follower-card__info {
+  flex: 1;
+}
+.follower-card__info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.follower-card__info p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+.follower-card__actions {
+  position: relative;
+}
+.follower-card__toggle {
+  display: none;
+}
+.follower-card__toggle:checked + .follower-card__btn + .follower-card__popup {
+  opacity: 1;
+  visibility: visible;
+  animation: hidePopup 3s forwards;
+}
+.follower-card__btn {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+}
+.follower-card__btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.follower-card__popup {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0.9);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes hidePopup {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.followers-page {
+  background: url("../images/playlist_create_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.followers-page__background {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+.followers-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem 1rem;
+  z-index: 1;
+  position: relative;
+}
+.followers-page__user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.followers-page__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.followers-page__user-info h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.followers-page__user-info p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+.followers-page__nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.followers-page__nav-button, .followers-page__logout {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.followers-page__nav-button:hover, .followers-page__logout:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.followers-page__content {
+  flex: 1;
+  padding: 0 4rem 2rem;
+  z-index: 1;
+  position: relative;
+}
+.followers-page__content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+.followers-page__content .followers-page__count {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+.followers-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .followers-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .followers-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.followers-page__footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+}
+
+.follower-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1.5rem 1.8rem;
+  gap: 1.5rem;
+  height: 120px;
+}
+.follower-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.follower-card__info {
+  flex: 1;
+}
+.follower-card__info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.follower-card__info p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+.follower-card__actions {
+  position: relative;
+}
+.follower-card__toggle {
+  display: none;
+}
+.follower-card__toggle:checked + .follower-card__btn + .follower-card__popup {
+  opacity: 1;
+  visibility: visible;
+  animation: hidePopup 3s forwards;
+}
+.follower-card__btn {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+}
+.follower-card__btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.follower-card__popup {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0.9);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes hidePopup {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.edit-profile {
+  background: url("../images/playlist_create_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+.edit-profile__background {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+}
+.edit-profile__container {
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+}
+.edit-profile__card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 3rem 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.edit-profile__avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+.edit-profile__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.edit-profile__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.edit-profile__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.edit-profile__field label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.edit-profile__input, .edit-profile__textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: inherit;
+}
+.edit-profile__input::placeholder, .edit-profile__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+.edit-profile__input:focus, .edit-profile__textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.edit-profile__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.edit-profile__change-button {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.edit-profile__change-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.edit-profile__text-label {
+  font-size: 1rem;
+  align-self: center;
+  opacity: 0.9;
+}
+.edit-profile__save-button {
+  background-color: #4e9c91;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+.edit-profile__save-button:hover {
+  background-color: #397c72;
+}
+
+.error-page {
+  background: linear-gradient(135deg, #1e2a3a, #3b4c5c);
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-page__container {
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+}
+.error-page__card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+.error-page__image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+.error-page__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+.error-page__message {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  line-height: 1.6;
+  text-align: center;
+}
+.error-page__button {
+  display: block;
+  background-color: #4e9c91;
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+.error-page__button:hover {
+  background-color: #397c72;
+}
+
+body.statistics-page {
+  background: url("../images/playlist_create_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-page__background {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.statistics-page__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  flex: 1;
+}
+
+.statistics-page__title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.statistics-page__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.statistics-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .statistics-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statistics-page__actions {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.statistics-page__back-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+}
+.statistics-page__back-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  text-align: left;
+}
+.stat-card h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.stat-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+.stat-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+.stat-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.stat-card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.stat-card ul li .genre-label {
+  width: 90px;
+  font-size: 1rem;
+}
+.stat-card ul li .genre-bar__container {
+  flex: 1;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  margin-left: 1rem;
+  position: relative;
+}
+.stat-card ul li .genre-bar__container .genre-bar {
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.stat-card ul li .genre-bar__container .pop {
+  width: 78%;
+  background-color: #63e6be;
+}
+.stat-card ul li .genre-bar__container .hiphop {
+  width: 54.5%;
+  background-color: #cba6f7;
+}
+.stat-card ul li .genre-bar__container .rock {
+  width: 26%;
+  background-color: #f9a825;
+}
+.stat-card ul li .genre-bar__container .electronic {
+  width: 11%;
+  background-color: #f76c6c;
+}
+.stat-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.stat-card .legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+.stat-card .legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.stat-card .legend li .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.stat-card .legend li .dot.a {
+  background-color: #63e6be;
+}
+.stat-card .legend li .dot.b {
+  background-color: #cba6f7;
+}
+.stat-card .legend li .dot.c {
+  background-color: #f76c6c;
+}
+.stat-card .legend li .dot.d {
+  background-color: #f9a825;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.playlist-page {
+  background: url("../images/playlist_create_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  position: relative;
+}
+.playlist-page__background {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+}
+.playlist-page__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.playlist-page__home-link {
+  color: #ccc;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+.playlist-page__home-link:hover {
+  color: #fff;
+}
+.playlist-page__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+.playlist-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.playlist-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.playlist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+.playlist-card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.playlist-card__content {
+  padding: 1rem;
+  text-align: left;
+}
+.playlist-card__content h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.playlist-card__content p {
+  margin: 0 0 0.8rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+.playlist-card__label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+}
+.playlist-card__label.public {
+  background-color: #3cbf96;
+  color: white;
+}
+.playlist-card__label.private {
+  background-color: #999;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  position: relative;
+}
+
+.edit-playlist-page-1 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  padding: 2rem;
+  overflow: hidden;
+}
+.edit-playlist-page-1::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../images/playlist1_photo.png") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(14px) brightness(0.5);
+}
+.edit-playlist-page-1__background {
+  display: none;
+}
+.edit-playlist-page-1__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 950px;
+}
+
+.edit-playlist__card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.edit-playlist__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.edit-playlist__image-wrapper {
+  position: relative;
+}
+.edit-playlist__image-wrapper .edit-playlist__image {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-input {
+  display: none;
+}
+
+.edit-playlist__info {
+  flex: 1;
+}
+.edit-playlist__info .edit-playlist__title-input {
+  font-size: 2rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.edit-playlist__info .edit-playlist__title-input:focus {
+  outline: none;
+  border-bottom: 2px solid #a78bfa;
+}
+.edit-playlist__info .edit-playlist__description {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.edit-playlist__info .edit-playlist__description::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.edit-playlist__info .edit-playlist__status {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+  width: 85px;
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D'%23ffffff'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+.edit-playlist__info .edit-playlist__status:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.edit-playlist__info .edit-playlist__status option {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.edit-playlist__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.edit-playlist__buttons .edit-playlist__edit-button,
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__buttons .edit-playlist__edit-button {
+  background-color: rgba(167, 139, 250, 0.9);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__edit-button:hover {
+  background-color: rgba(139, 92, 246, 0.9);
+}
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.edit-playlist__songs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.edit-playlist__songs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+.edit-playlist__songs li .delete-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.edit-playlist__songs li .delete-btn:hover {
+  color: #f87171;
+}
+
+.edit-playlist-page-2 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  padding: 2rem;
+  overflow: hidden;
+}
+.edit-playlist-page-2::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../images/playlist2_photo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(14px) brightness(0.5);
+}
+.edit-playlist-page-2__background {
+  display: none;
+}
+.edit-playlist-page-2__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 950px;
+}
+
+.edit-playlist__card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.edit-playlist__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.edit-playlist__image-wrapper {
+  position: relative;
+}
+.edit-playlist__image-wrapper .edit-playlist__image {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-input {
+  display: none;
+}
+
+.edit-playlist__info {
+  flex: 1;
+}
+.edit-playlist__info .edit-playlist__title-input {
+  font-size: 2rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.edit-playlist__info .edit-playlist__title-input:focus {
+  outline: none;
+  border-bottom: 2px solid #a78bfa;
+}
+.edit-playlist__info .edit-playlist__description {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.edit-playlist__info .edit-playlist__description::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.edit-playlist__info .edit-playlist__status {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+  width: 85px;
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D'%23ffffff'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+.edit-playlist__info .edit-playlist__status:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.edit-playlist__info .edit-playlist__status option {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.edit-playlist__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.edit-playlist__buttons .edit-playlist__edit-button,
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__buttons .edit-playlist__edit-button {
+  background-color: rgba(167, 139, 250, 0.9);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__edit-button:hover {
+  background-color: rgba(139, 92, 246, 0.9);
+}
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.edit-playlist__songs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.edit-playlist__songs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+.edit-playlist__songs li .delete-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.edit-playlist__songs li .delete-btn:hover {
+  color: #f87171;
+}
+
+.edit-playlist-page-3 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  padding: 2rem;
+  overflow: hidden;
+}
+.edit-playlist-page-3::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../images/playlist3_photo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(14px) brightness(0.5);
+}
+.edit-playlist-page-3__background {
+  display: none;
+}
+.edit-playlist-page-3__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 950px;
+}
+
+.edit-playlist__card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.edit-playlist__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.edit-playlist__image-wrapper {
+  position: relative;
+}
+.edit-playlist__image-wrapper .edit-playlist__image {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-input {
+  display: none;
+}
+
+.edit-playlist__info {
+  flex: 1;
+}
+.edit-playlist__info .edit-playlist__title-input {
+  font-size: 2rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.edit-playlist__info .edit-playlist__title-input:focus {
+  outline: none;
+  border-bottom: 2px solid #a78bfa;
+}
+.edit-playlist__info .edit-playlist__description {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.edit-playlist__info .edit-playlist__description::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.edit-playlist__info .edit-playlist__status {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+  width: 85px;
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D'%23ffffff'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+.edit-playlist__info .edit-playlist__status:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.edit-playlist__info .edit-playlist__status option {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.edit-playlist__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.edit-playlist__buttons .edit-playlist__edit-button,
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__buttons .edit-playlist__edit-button {
+  background-color: rgba(167, 139, 250, 0.9);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__edit-button:hover {
+  background-color: rgba(139, 92, 246, 0.9);
+}
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.edit-playlist__songs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.edit-playlist__songs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+.edit-playlist__songs li .delete-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.edit-playlist__songs li .delete-btn:hover {
+  color: #f87171;
+}
+
+.edit-playlist-page-4 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  padding: 2rem;
+  overflow: hidden;
+}
+.edit-playlist-page-4::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../images/playlist4_photo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(14px) brightness(0.5);
+}
+.edit-playlist-page-4__background {
+  display: none;
+}
+.edit-playlist-page-4__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 950px;
+}
+
+.edit-playlist__card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.edit-playlist__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.edit-playlist__image-wrapper {
+  position: relative;
+}
+.edit-playlist__image-wrapper .edit-playlist__image {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-label:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.edit-playlist__image-wrapper .edit-playlist__upload-input {
+  display: none;
+}
+
+.edit-playlist__info {
+  flex: 1;
+}
+.edit-playlist__info .edit-playlist__title-input {
+  font-size: 2rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.edit-playlist__info .edit-playlist__title-input:focus {
+  outline: none;
+  border-bottom: 2px solid #a78bfa;
+}
+.edit-playlist__info .edit-playlist__description {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.edit-playlist__info .edit-playlist__description::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.edit-playlist__info .edit-playlist__status {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+  width: 85px;
+  background-image: url("data:image/svg+xml,%3Csvg%20fill%3D'%23ffffff'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+.edit-playlist__info .edit-playlist__status:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.edit-playlist__info .edit-playlist__status option {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.edit-playlist__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.edit-playlist__buttons .edit-playlist__edit-button,
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.edit-playlist__buttons .edit-playlist__edit-button {
+  background-color: rgba(167, 139, 250, 0.9);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__edit-button:hover {
+  background-color: rgba(139, 92, 246, 0.9);
+}
+.edit-playlist__buttons .edit-playlist__cancel-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.edit-playlist__buttons .edit-playlist__cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.edit-playlist__songs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.edit-playlist__songs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+.edit-playlist__songs li .delete-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.edit-playlist__songs li .delete-btn:hover {
+  color: #f87171;
+}
+
+.auth-page {
+  background: linear-gradient(145deg, #2b3945, #1e2a35);
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+}
+
+.auth-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.auth-card__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.8rem;
+}
+.auth-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.auth-card__form label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.auth-card__form input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #000;
+}
+.auth-card__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.auth-card__button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.auth-card__button--confirm {
+  background-color: #4da79c;
+  color: #ffffff;
+}
+.auth-card__button--confirm:hover {
+  background-color: #3c8f85;
+}
+.auth-card__button--cancel {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+.auth-card__button--cancel:hover {
+  background-color: #444;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=main.css.map */

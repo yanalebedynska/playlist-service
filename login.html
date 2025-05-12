@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="login">
+  <main class="login__container">
+    <section class="login__card">
+      <h2 class="login__subtitle">Login to Your Account</h2>
+
+      <!-- External Auth Buttons -->
+      <div class="external-auth">
+        <a href="error_login.html" class="external-auth__button external-auth__button--google">
+          <img src="images/google-logo.png" alt="Google logo" class="external-auth__icon" />
+          Continue with Google
+        </a>
+        <a href="error_login.html" class="external-auth__button external-auth__button--apple">
+          <img src="images/apple-logo.png" alt="Apple logo" class="external-auth__icon" />
+          Continue with Apple
+        </a>
+      </div>
+
+      <form class="login__form" onsubmit="event.preventDefault(); window.location.href='user-profile.html';">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" class="login__input" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" class="login__input" name="password" required />
+        </div>
+        <div class="login__buttons">
+          <button type="submit" class="login__button">Login</button>
+          <button type="button" class="login__button login__button--secondary" onclick="window.location.href='index.html'">Cancel</button>
+        </div>
+      </form>
+    </section>
+    <footer class="login__footer">© 2025 TuneMixa</footer>
+  </main>
+</body>
+</html>

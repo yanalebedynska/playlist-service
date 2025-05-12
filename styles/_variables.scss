@@ -1,0 +1,63 @@
+// styles/_variables.scss
+
+// Шрифт
+$font-stack: 'Segoe UI', sans-serif;
+
+// Кольори
+$button-text: white;
+$primary-color: #4e9c91;
+$primary-color-hover: #397c72;
+$bg-gradient-start: #fef6f3;
+$bg-gradient-end: #e3e9f3;
+$text-color: #333;
+$text-dark: #222;
+$card-bg: #ffffff;
+$background-color: #ffffff;
+$light-gray: #f3f3f3;
+$text-color-dark: #1a1a1a;
+$text-color-darker: #262626;
+$color-white: #ffffff;
+$btn-secondary-color: #333;
+$back-link-color: #a0e9ff;
+$gray-border: #ccc;
+$btn-dark: #191818;
+$btn-dark-hover: #434343;
+$gray-border-dark: #7c7a7a;
+$light-gray-hover: #f2f2f2;
+$background-color-2: #444;
+$color-black: #000;
+$background-black-light: #2b3945;
+$background-black: #1e2a35;
+
+
+$container-bg-light: rgba(255, 255, 255, 0.08);
+$btn-light-bg: rgba(255, 255, 255, 0.12);
+$error-popup-bg: rgba(255, 0, 0, 0.9);
+$follower-card-bg: rgba(255, 255, 255, 0.08);
+$btn-secondary-bg: rgba(255, 255, 255, 0.6);
+$btn-secondary-hover: rgba(255, 255, 255, 0.8);
+$footer-text-color: rgba(255, 255, 255, 0.8);
+$background-color: rgba(255, 255, 255, 0.1);
+$color-light-gray: rgba(255, 255, 255, 0.6);
+$background-color2: rgba(0, 0, 0, 0.6);
+$background-color-register: rgba(255, 255, 255, 0.05);
+$success-bg-color: rgba(0, 200, 100, 0.8);
+$overlay-bg-color: rgba(0, 0, 0, 0.5);
+$container-bg-color: rgba(255, 255, 255, 0.2);
+
+// Бордери та тіні
+$border-radius: 10px;
+$card-radius: 20px;
+$avatar-size: 90px;
+$avatar-small-size: 64px;
+$card-height: 120px;
+$card-gap: 2rem;
+$heading-font-size: 2rem;
+$header-padding-x: 4rem;
+
+$shadow-light: 0 10px 25px rgba(0, 0, 0, 0.08);
+$shadow-light: 0 10px 25px rgba(0, 0, 0, 0.2);
+$shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.25);
+$shadow-deep: 0 12px 30px rgba(0, 0, 0, 0.3);
+$follower-popup-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+

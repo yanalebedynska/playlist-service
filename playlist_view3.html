@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Playlist - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="edit-playlist-page-3">
+  <div class="edit-playlist-page__background"></div>
+
+  <main class="edit-playlist-page__container">
+    <div class="edit-playlist__card">
+      <div class="edit-playlist__header">
+        <!-- Playlist Cover with Upload -->
+        <div class="edit-playlist__image-wrapper">
+          <img src="images/playlist3_photo.jpg" alt="Playlist Cover" class="edit-playlist__image" id="playlistCover" />
+          <label for="uploadCover" class="edit-playlist__upload-label">Change</label>
+          <input type="file" id="uploadCover" accept="image/*" class="edit-playlist__upload-input" />
+        </div>
+
+        <!-- Info Block -->
+        <div class="edit-playlist__info">
+          <input type="text" class="edit-playlist__title-input" value="Morning Focus" />
+          <input type="text" placeholder="Music to start your day right" class="edit-playlist__description" />
+          <select class="edit-playlist__status">
+            <option value="public" selected>Public</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="edit-playlist__buttons">
+          <button class="edit-playlist__edit-button" onclick="window.location.href='playlist-list.html'">Save</button>
+          <button class="edit-playlist__cancel-button" onclick="window.location.href='playlist-list.html'">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Songs List -->
+      <ul class="edit-playlist__songs">
+        <li>Boom clap <button class="delete-btn">🗑️</button></li>
+        <li>Set Fire to Rain <button class="delete-btn">🗑️</button></li>
+        <li>Mad Love <button class="delete-btn">🗑️</button></li>
+        <li>Sure thing <button class="delete-btn">🗑️</button></li>
+        <li>Reality <button class="delete-btn">🗑️</button></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Preview Uploaded Cover -->
+  <script>
+    document.getElementById('uploadCover').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const image = document.getElementById('playlistCover');
+        image.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

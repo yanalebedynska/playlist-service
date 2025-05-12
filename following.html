@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Following - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="followers-page">
+  <div class="followers-page__background"></div>
+
+  <header class="followers-page__header">
+    <div class="followers-page__user">
+      <img src="images/user_avatar.png" alt="User Avatar" class="followers-page__avatar" />
+      <div class="followers-page__user-info">
+        <h2>Yana Lebedynska</h2>
+        <p>yanaLebedynska@gmail.com</p>
+      </div>
+    </div>
+    <div class="followers-page__nav-buttons">
+      <button class="followers-page__nav-button" onclick="window.location.href='user-profile.html'">Home</button>
+      <button class="followers-page__logout" onclick="window.location.href='index.html'">Logout</button>
+    </div>
+  </header>
+
+  <main class="followers-page__content">
+    <h1>Following</h1>
+    <p class="followers-page__count">5 following</p>
+
+    <section class="followers-page__grid">
+      <!-- === Followed artists === -->
+      <div class="follower-card">
+        <img src="images/following1.png" alt="Taylor Swift" />
+        <div class="follower-card__info">
+          <h3>Taylor Swift</h3>
+          <p>@taylorswift</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f1" class="follower-card__toggle" />
+          <label for="f1" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this artist. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/following2.png" alt="The Weeknd" />
+        <div class="follower-card__info">
+          <h3>The Weeknd</h3>
+          <p>@theweeknd</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f2" class="follower-card__toggle" />
+          <label for="f2" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this artist. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/following3.png" alt="Billie Eilish" />
+        <div class="follower-card__info">
+          <h3>Billie Eilish</h3>
+          <p>@billieeilish</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f3" class="follower-card__toggle" />
+          <label for="f3" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this artist. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/following4.png" alt="Ed Sheeran" />
+        <div class="follower-card__info">
+          <h3>Ed Sheeran</h3>
+          <p>@edsheeran</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f4" class="follower-card__toggle" />
+          <label for="f4" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this artist. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/following5.png" alt="Dua Lipa" />
+        <div class="follower-card__info">
+          <h3>Dua Lipa</h3>
+          <p>@dualipa</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f5" class="follower-card__toggle" />
+          <label for="f5" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this artist. Changes will be visible soon.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="followers-page__footer">
+    &copy; 2025 TuneMixa
+  </footer>
+</body>
+</html>

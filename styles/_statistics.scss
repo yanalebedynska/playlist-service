@@ -1,0 +1,173 @@
+body.statistics-page {
+  background: url('../images/playlist_create_background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-page__background {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.statistics-page__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  flex: 1; // розтягує, щоб футер ішов вниз
+}
+
+.statistics-page__title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.statistics-page__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.statistics-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statistics-page__actions {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.statistics-page__back-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  text-align: left;
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    opacity: 0.85;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .genre-label {
+        width: 90px;
+        font-size: 1rem;
+      }
+
+      .genre-bar__container {
+        flex: 1;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        margin-left: 1rem;
+        position: relative;
+
+        .genre-bar {
+          height: 100%;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .pop { width: 78%; background-color: #63e6be; }
+        .hiphop { width: 54.5%; background-color: #cba6f7; }
+        .rock { width: 26%; background-color: #f9a825; }
+        .electronic { width: 11%; background-color: #f76c6c; }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+
+        &.a { background-color: #63e6be; }
+        &.b { background-color: #cba6f7; }
+        &.c { background-color: #f76c6c; }
+        &.d { background-color: #f9a825; }
+      }
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}

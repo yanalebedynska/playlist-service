@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <h1 class="auth-card__title">Create Your Account</h1>
+
+    <form class="auth-card__form">
+  <label for="username">Username:</label>
+  <input type="text" id="username" placeholder="Enter your username" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Enter your email" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" placeholder="+380 (__) ___-__-__" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="Create a password" required>
+
+  <label for="confirm-password">Confirm Password:</label>
+  <input type="password" id="confirm-password" placeholder="Repeat your password" required>
+
+  <div class="auth-card__actions">
+    <a href="user-profile.html" class="auth-card__button auth-card__button--confirm">Register</a>
+    <button type="button" class="auth-card__button auth-card__button--cancel" onclick="window.location.href='index.html'">Cancel</button>
+  </div>
+</form>
+  </main>
+
+  <footer class="footer">© 2025 TuneMixa</footer>
+</body>
+</html>

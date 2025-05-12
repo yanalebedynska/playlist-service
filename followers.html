@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Followers - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="followers-page">
+  <div class="followers-page__background"></div>
+
+  <header class="followers-page__header">
+    <div class="followers-page__user">
+      <img src="images/user_avatar.png" alt="User Avatar" class="followers-page__avatar" />
+      <div class="followers-page__user-info">
+        <h2>Yana Lebedynska</h2>
+        <p>yanaLebedynska@gmail.com</p>
+      </div>
+    </div>
+    <div class="followers-page__nav-buttons">
+      <button class="followers-page__nav-button" onclick="window.location.href='user-profile.html'">Home</button>
+      <button class="followers-page__logout" onclick="window.location.href='index.html'">Logout</button>
+    </div>
+  </header>
+
+  <main class="followers-page__content">
+    <h1>Followers</h1>
+    <p class="followers-page__count">7 followers</p>
+
+    <section class="followers-page__grid">
+      <!-- Repeatable follower block -->
+      <div class="follower-card">
+        <img src="images/avatar_user1.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>Ely Ortega</h3>
+          <p>@Elyy</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f1" class="follower-card__toggle" />
+          <label for="f1" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/avatar_user2.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>Olivia Pereira</h3>
+          <p>@Lunas_helena</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f2" class="follower-card__toggle" />
+          <label for="f2" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/avatar_user3.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>Jacob Murphy</h3>
+          <p>@JustJacob</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f3" class="follower-card__toggle" />
+          <label for="f3" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/avatar_user4.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>Emily Becker</h3>
+          <p>@Em</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f4" class="follower-card__toggle" />
+          <label for="f4" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/avatar_user5.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>Games Müller</h3>
+          <p>@Gamy</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f5" class="follower-card__toggle" />
+          <label for="f5" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/avatar_user6.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>James White</h3>
+          <p>@Snow.White</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f6" class="follower-card__toggle" />
+          <label for="f6" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+
+      <div class="follower-card">
+        <img src="images/avatar_user7.png" alt="Avatar" />
+        <div class="follower-card__info">
+          <h3>Natalie Ferenc</h3>
+          <p>@Nataly</p>
+        </div>
+        <div class="follower-card__actions">
+          <input type="checkbox" id="f7" class="follower-card__toggle" />
+          <label for="f7" class="follower-card__btn">Following</label>
+          <div class="follower-card__popup">You have unfollowed this user. Changes will be visible soon.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="followers-page__footer">
+    &copy; 2025 TuneMixa
+  </footer>
+</body>
+</html>

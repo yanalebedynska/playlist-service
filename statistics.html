@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Music Statistics - TuneMixa</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="statistics-page">
+  <div class="statistics-page__background"></div>
+
+  <main class="statistics-page__container">
+    <h1 class="statistics-page__title">Your Music Statistics</h1>
+    <p class="statistics-page__subtitle">See an overview of your listening habits on this page.</p>
+
+    <div class="statistics-page__grid">
+      <div class="stat-card stat-time">
+        <h2>14 h 32 min</h2>
+        <p>Time Listened</p>
+      </div>
+
+      <div class="stat-card stat-genres">
+        <h3>Top Genres</h3>
+        <ul>
+          <li>
+            <span class="genre-label">Pop</span>
+            <div class="genre-bar__container">
+              <div class="genre-bar pop"></div>
+            </div>
+          </li>
+          <li>
+            <span class="genre-label">Hip Hop</span>
+            <div class="genre-bar__container">
+              <div class="genre-bar hiphop"></div>
+            </div>
+          </li>
+          <li>
+            <span class="genre-label">Rock</span>
+            <div class="genre-bar__container">
+              <div class="genre-bar rock"></div>
+            </div>
+          </li>
+          <li>
+            <span class="genre-label">Electronic</span>
+            <div class="genre-bar__container">
+              <div class="genre-bar electronic"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="stat-card stat-history">
+        <h3>Listening History</h3>
+        <img src="images/listening_chart_labeled.png" alt="Listening History Chart" />
+      </div>
+
+      <div class="stat-card stat-artists">
+        <h3>Top Artists</h3>
+        <img src="images/chart_pie.png" alt="Top Artists Pie Chart" />
+        <ul class="legend">
+          <li><span class="dot a"></span>Taylor Swift</li>
+          <li><span class="dot b"></span>Drake</li>
+          <li><span class="dot c"></span>Beyoncé</li>
+          <li><span class="dot d"></span>The Weeknd</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="statistics-page__actions">
+      <button class="statistics-page__back-button" onclick="window.location.href='user-profile.html'">Go Back</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Playlist Service</p>
+  </footer>
+</body>
+</html>
